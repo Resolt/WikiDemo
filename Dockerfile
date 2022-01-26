@@ -11,4 +11,4 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN rm requirements.txt
 
-CMD ["./start_api.sh"]
+CMD ["./start_app.sh"]
