@@ -1,0 +1,19 @@
+{% extends "wiki/wiki_page_base.html" %}
+
+{% block bodyblock %}
+
+<h1>
+    {% if not form.instance.pk %}
+        Create Wiki Page
+    {% else %}
+        Update Wiki Page
+    {% endif %}
+</h1>
+
+<form action="", method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+
+{% endblock %}
