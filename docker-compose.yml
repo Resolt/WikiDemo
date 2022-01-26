@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: wiki-db
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: "wiki"
+      POSTGRES_USER: "wiki"
+      POSTGRES_DB: "wiki"
+    ports:
+      - 5444:5432
+  # wiki:
+  #   container_name: wiki-app
+  #   build: .
+  #   restart: unless-stopped
+  #   environment:
+  #     DB_HOST: "database"
+  #     DB_NAME: "wiki"
+  #     DB_USER: "wiki"
+  #     DB_PASS: "wiki"
+  #     DB_PORT: "5432"
+  #     HOST: "0.0.0.0"
+  #     PORT: "8888"
+  #   ports:
+  #     - 8888:8888
+  #   links:
+  #     - "db:database"
