@@ -3,8 +3,8 @@ from django.urls import reverse
 
 
 class WikiPage(models.Model):
-    title = models.CharField(max_length=256)
-    text = models.CharField(max_length=2048)
+    title = models.CharField(max_length=100)
+    text = models.TextField(max_length=2000)
 
     def __str__(self):
         return self.name

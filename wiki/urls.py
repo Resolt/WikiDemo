@@ -7,7 +7,7 @@ from . import views
 app_name = 'wiki'
 
 urlpatterns = [
-  path('', views.IndexView.as_view(), name='wiki'),
+    path('', views.IndexView.as_view(), name='wiki'),
     path('admin/', admin.site.urls),
     path('list/', views.WikiPageListView.as_view(), name='list'),
     path('list/<int:pk>', views.WikiPageDetailView.as_view(), name="detail"),

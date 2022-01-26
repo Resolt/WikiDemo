@@ -18,7 +18,24 @@
 
 <form action="", method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form.non_field_errors }}
+    <div class="fieldWrapper">
+        <p>
+            {{ form.title.errors }}
+            <label for="{{ form.title.id_for_label }}">Title</label>
+            <br>
+            {{ form.title }}
+        </p>
+    </div>
+    <div class="fieldWrapper">
+        <p>
+            {{ form.text.errors }}
+            <label for="{{ form.text.id_for_label }}">Text</label>
+            <br>
+            {{ form.text }}
+        </p>
+    </div>
+    {% comment %} {{ form.as_p }} {% endcomment %}
     <input type="submit" class="btn btn-primary" value="Save">
 </form>
 
