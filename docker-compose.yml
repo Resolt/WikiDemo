@@ -23,6 +23,7 @@ services:
   #     DB_PORT: "5432"
   #     HOST: "0.0.0.0"
   #     PORT: "8888"
+  #     WORKERS: "2"
   #   ports:
   #     - 8888:8888
   #   links:
