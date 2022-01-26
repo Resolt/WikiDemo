@@ -1,5 +1,9 @@
 {% extends "wiki/wiki_page_base.html" %}
 
+{% block headerblock %}
+    <title>{{ wiki_page.title }}</title>
+{% endblock %}
+
 {% block bodyblock %}
 
 <h1>Delete {{ wiki_page.title }}? </h1>

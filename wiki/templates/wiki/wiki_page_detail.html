@@ -1,19 +1,21 @@
 {% extends "wiki/wiki_page_base.html" %}
 
+{% block headerblock %}
+    <title>{{ wiki_page_detail.title }}</title>
+{% endblock %}
+
 {% block bodyblock %}
 
 <div class="jumbotron">
-    <h2>Wiki details:</h2>
-    <p>Title: {{ wiki_page_detail.title }}</p>
-    <p>Text: {{ wiki_page_detail.text }}</p>
+    <h2>{{ wiki_page_detail.title }}</h2>
+    <p>{{ wiki_page_detail.text }}</p>
 </div>
 
 <div class="container">
-    <p><a class="btn btn-warning" href="{% url 'wiki:update' pk=wiki_page_detail.pk %}">Update</a></p>
-</div>
-
-<div class="container">
-    <p><a class="btn btn-warning" href="{% url 'wiki:delete' pk=wiki_page_detail.pk %}">Delete</a></p>
+    <p>
+        <a class="btn btn-warning" href="{% url 'wiki:update' pk=wiki_page_detail.pk %}">Edit</a>
+        <a class="btn btn-warning" href="{% url 'wiki:delete' pk=wiki_page_detail.pk %}">Delete</a>
+    </p>
 </div>
 
 {% endblock %}
