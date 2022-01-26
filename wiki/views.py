@@ -16,14 +16,14 @@ class IndexView(TemplateView):
 
 
 class WikiPageListView(ListView):
-    context_object_name = 'wiki_page_list'
     model = models.WikiPage
+    context_object_name = 'wiki_page_list'
     template_name = "wiki/wiki_page_list.html"
 
 
 class WikiPageDetailView(DetailView):
-    context_object_name = 'wiki_page_detail'
     model = models.WikiPage
+    context_object_name = 'wiki_page_detail'
     template_name = "wiki/wiki_page_detail.html"
 
 
@@ -37,7 +37,6 @@ class WikiPageUpdateView(UpdateView):
     model = models.WikiPage
     template_name = "wiki/wiki_page_form.html"
     fields = ('title', 'text')
-
 
 
 class WikiPageDeleteView(DeleteView):
