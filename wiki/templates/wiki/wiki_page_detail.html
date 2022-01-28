@@ -12,8 +12,8 @@
 </div>
 <div>
     {% if wiki_page_detail.links %}
-        {% for name, path in wiki_page_detail.links %}
-            <a href={{ path }}>name</a>
+        {% for wiki_page_link in wiki_page_detail.get_links %}
+            <a href={{ wiki_page_link.url }}>{{ wiki_page_link.title }}</a>
         {% endfor %}
     {% endif %}
 </div>
