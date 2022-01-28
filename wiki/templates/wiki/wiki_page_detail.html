@@ -10,6 +10,13 @@
 <div class="jumbotron">
     <p>{{ wiki_page_detail.text }}</p>
 </div>
+<div>
+    {% if wiki_page_detail.links %}
+        {% for name, path in wiki_page_detail.links %}
+            <a href={{ path }}>name</a>
+        {% endfor %}
+    {% endif %}
+</div>
 
 <div class="container">
     <p>

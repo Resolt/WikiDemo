@@ -35,6 +35,14 @@
             {{ form.text }}
         </p>
     </div>
+    <div class="fieldWrapper">
+        <p>
+            {{ from.links.errors }}
+            <label for="{{ form.links.id_for_label }}">Links</label>
+            <br>
+            {{ form.links }}
+        </p>
+    </div>
     {% comment %} {{ form.as_p }} {% endcomment %}
     <input type="submit" class="btn btn-primary" value="Save">
 </form>

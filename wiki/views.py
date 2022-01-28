@@ -30,13 +30,13 @@ class WikiPageDetailView(DetailView):
 class WikiPageCreateView(CreateView):
     model = models.WikiPage
     template_name = "wiki/wiki_page_form.html"
-    fields = ('title', 'text')
+    fields = ('title', 'text', 'links')
 
 
 class WikiPageUpdateView(UpdateView):
     model = models.WikiPage
     template_name = "wiki/wiki_page_form.html"
-    fields = ('title', 'text')
+    fields = ('title', 'text', 'links')
 
 
 class WikiPageDeleteView(DeleteView):
