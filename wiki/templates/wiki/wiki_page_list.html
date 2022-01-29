@@ -2,12 +2,16 @@
 
 {% block bodyblock %}
 
-    <h1>Here is the list of all the wiki pages</h1>
+<h1>Wiki Pages</h1>
 
-    <ol>
-        {% for wiki_page in wiki_page_list %}
-        <h2><li><a href="{{ wiki_page.id }}">{{ wiki_page.title }}</a></li></h2>
-        {% endfor %}
-    </ol>
+{% if not wiki_page_list %}
+<h3>There are no wiki pages</h3>
+{% else %}
+<ol>
+    {% for wiki_page in wiki_page_list %}
+    <h2><li><a href="{{ wiki_page.id }}">{{ wiki_page.title }}</a></li></h2>
+    {% endfor %}
+</ol>
+{% endif %}
 
 {% endblock %}
