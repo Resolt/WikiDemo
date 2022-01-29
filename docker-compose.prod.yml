@@ -9,8 +9,6 @@ services:
       POSTGRES_PASSWORD: "${DB_PASS}"
       POSTGRES_USER: "${DB_USER}"
       POSTGRES_DB: "${DB_NAME}"
-    # ports:
-    #   - 5444:5432
   wiki:
     container_name: wiki-app
     image: wiki-demo
