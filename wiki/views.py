@@ -26,6 +26,12 @@ class WikiPageDetailView(DetailView):
     context_object_name = 'wiki_page_detail'
     template_name = "wiki/wiki_page_detail.html"
 
+    def get(self, request, *args, **kwargs):
+        resp = super(WikiPageDetailView, self).get(request, *args, **kwargs)
+        self.object.counter += 1
+        self.object.save()
+        return resp
+
 
 class WikiPageCreateView(CreateView):
     model = models.WikiPage
