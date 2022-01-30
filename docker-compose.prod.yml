@@ -11,7 +11,7 @@ services:
       POSTGRES_DB: "${DB_NAME}"
   wiki:
     container_name: wiki-app
-    image: wiki-demo
+    image: "${IMAGE_TAG}"
     restart: unless-stopped
     environment:
       DB_HOST: "${DB_HOST}"
